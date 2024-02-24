@@ -59,7 +59,7 @@ export const getDate = async (date = 5, year = 2023) => {
         if (d > 0 && d < 6) {
             let minutes = randomMinuteNum()
             let seconds = randomMinuteNum()
-            let hour = 10
+            let hour = 22
             let res = moment(a)
                 // .minutes(minutes)
                 .hour(hour)//时

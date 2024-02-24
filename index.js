@@ -113,7 +113,7 @@ const init = async (name, num, month, years = 2023, section = [300, 400]) => {
         if (res.num > 0) {
             throw '数太大整除不了,请调整最大区间'
         }
-        let url = `./发票地址/${name}-${years}-${month}`
+        let url = `./发票地址/${name}-${years}年${month}月—发票报销`
         let csv = url + `.csv`
         // let xlsx = url + '.xlsx'
         await writeFile(csv, csvData([...res.list, { 总金额: num, 剩余: res.num }]))
@@ -144,7 +144,7 @@ const init = async (name, num, month, years = 2023, section = [300, 400]) => {
  * @param {*} years 年份
  * @param {*} section 单项金额区间
  */
-  init('郑立峰', 2452, 5, 2023, [250, 300])
+  init('郑立峰', 3127 + 4169,1 , 2024, [320, 350])
 
 
 
